@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chess.checkmate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+	    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.chess.checkmate.Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.chess.checkmate.CheckMate"
+        		  android:label="@string/app_name">
+        </activity>
+        <activity android:name="Preferences"
+        		  android:label="Preferences">
+        </activity>
+        <activity android:name="EditBoard"
+        		  android:label="Edit Board"
+                  android:configChanges="orientation">
+        </activity>
+        <activity android:name="LoadPGN"
+        		  android:label="Load PGN game"
+        		  android:configChanges="orientation">
+        </activity>
+        <activity android:name="CPUWarning"
+        		  android:label="CPU Warning">
+        </activity>
+        <activity android:name="com.chess.checkmate.bluetooth.DeviceListActivity"
+        		  android:label="Select Device"
+        		  android:theme="@android:style/Theme.Dialog"
+                  android:configChanges="orientation|keyboardHidden">
+        </activity>
+    </application>
+
+</manifest>
